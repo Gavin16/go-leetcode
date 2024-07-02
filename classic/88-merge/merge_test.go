@@ -1,4 +1,4 @@
-package merge
+package _8_merge
 
 import (
 	"fmt"

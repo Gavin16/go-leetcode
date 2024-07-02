@@ -1,4 +1,4 @@
-package merge
+package _8_merge
 
 // 力扣 《面试经典 150 题》
 // 88. 合并两个有序数组

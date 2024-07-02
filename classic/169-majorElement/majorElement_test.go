@@ -1,4 +1,4 @@
-package majoElement
+package _69_majorElement
 
 import (
 	"fmt"

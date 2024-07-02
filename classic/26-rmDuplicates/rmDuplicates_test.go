@@ -1,4 +1,4 @@
-package rmDuplicates
+package _6_rmDuplicates
 
 import (
 	"fmt"

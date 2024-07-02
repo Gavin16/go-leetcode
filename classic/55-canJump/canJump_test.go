@@ -1,4 +1,4 @@
-package canJump
+package _5_canJump
 
 import (
 	"testing"

@@ -1,4 +1,4 @@
-package maxProfit
+package _21_maxProfit
 
 import "testing"
 

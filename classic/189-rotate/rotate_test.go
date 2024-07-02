@@ -1,4 +1,4 @@
-package rotate
+package _89_rotate
 
 import (
 	"testing"
@@ -12,7 +12,7 @@ func TestRotate(t *testing.T) {
 	expected := []int{5, 6, 7, 1, 2, 3, 4}
 	for i, v := range expected {
 		if nums[i] != v {
-			t.Errorf("rotate failed at index %d expected %d, got %d", i, v, nums[i])
+			t.Errorf("189-rotate failed at index %d expected %d, got %d", i, v, nums[i])
 		}
 	}
 
@@ -22,7 +22,7 @@ func TestRotate(t *testing.T) {
 	expected1 := []int{3, 99, -1, -100}
 	for i, v := range expected1 {
 		if nums1[i] != v {
-			t.Errorf("rotate failed at index %d expected %d, got %d", i, v, nums1[i])
+			t.Errorf("189-rotate failed at index %d expected %d, got %d", i, v, nums1[i])
 		}
 	}
 }

@@ -1,4 +1,4 @@
-package rmDuplicates2
+package _0_rmDuplicates2
 
 import (
 	"sort"

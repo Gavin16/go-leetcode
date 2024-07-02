@@ -1,4 +1,4 @@
-package maxProfit2
+package _22_maxProfit2
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 func TestMaxProfit(t *testing.T) {
 
 	//nums := []int{7, 1, 5, 3, 6, 4}
-	//profit := maxProfit(nums)
+	//profit := 121-maxProfit(nums)
 	//fmt.Println(profit)
 
 	nums := []int{7, 1, 5, 3, 6, 4}

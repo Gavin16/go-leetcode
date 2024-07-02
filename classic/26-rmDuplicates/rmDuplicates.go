@@ -1,4 +1,4 @@
-package rmDuplicates
+package _6_rmDuplicates
 
 // 26. 删除有序数组中的重复项
 // 给你一个 非严格递增排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，

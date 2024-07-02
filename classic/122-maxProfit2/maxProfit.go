@@ -1,4 +1,4 @@
-package maxProfit2
+package _22_maxProfit2
 
 // 122. 买卖股票的最佳时机 II
 // 给你一个整数数组 prices ，其中 prices[i] 表示某支股票第 i 天的价格。

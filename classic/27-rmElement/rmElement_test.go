@@ -1,4 +1,4 @@
-package rmElement
+package _7_rmElement
 
 import (
 	"fmt"
