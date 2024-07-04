@@ -20,3 +20,7 @@
 | 380 | O(1) 时间插入、删除和获取随机元素 | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/380-RandomizedSet/RandomizedSet.go) | 11.71% | 中等 | 集合,系统设计|
 | 238 | 除自身以外数组的乘积| [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/238-prodExceptSelf/prodExceptSelf.go) | 90.45% | 中等 | 数组 |
 | 134 | 加油站 | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/134-completeCircuit/canCompleteCircuit.go) | 91.42% | 中等 | 数组 |
+| 135 | 分发糖果| [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/135-candy/candy.go) | 49.48% | 困难 | 数组,贪心算法|
+| 42  | 接雨水 | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/42-trap/trap.go) | 39.96% | 困难 | 数组, 双指针 |
+| 13  | 罗马数字转整数 | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/13-romanToInt/romanToInt.go) | 86.68% | 简单 | 哈希表,字符串|
+| 12  | 整数转罗马数字 | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/12-intToRoman/intToRoman.go) | 21.51% | 中等 | 哈希表,字符串|
