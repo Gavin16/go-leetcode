@@ -3,8 +3,6 @@
 根据题库、数据结构和算法进行整理输出
 
 ### [面试经典 150 题](https://leetcode.cn/studyplan/top-interview-150/)
-<details>
-    <summary>题目统计</summary>
 
 | No. | Title               |                                                 Solution                                                 |  Beats  | Difficulty |     Tags     |
 |:---:|:--------------------|:--------------------------------------------------------------------------------------------------------:|:-------:|:----------:|:------------:|
@@ -32,5 +30,6 @@
 |  6  | Z字形变换               |           [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/6-convert/convert.go)            | 90.72%  |     中等     |     字符串      |
 | 28  | 找出字符串中第一个匹配项的下标     |            [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/28-strStr/strStr.go)            | 100.00% |     简单     |   字符串, 双指针   |
 | 67  | 文本左右对齐              |       [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/67-fullJustify/fullJustify.go)       | 100.00% |     困难     |   数组, 字符串    |
-
-</details>
+| 167 | 两数之和II-输入有序数组   |   [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/167-twoSum/twoSum.go) | 82.96% | 中等 | 数组,双指针 |
+| 11  | 盛水最多的容器   | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/11-maxArea/maxArea.go) | 23.32% | 中等 | 贪心,数组,双指针 |
+| 15  | 三数之和   | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/15-threeSum/threeSum.go) | 93.80% | 中等 | 数组, 双指针 |
