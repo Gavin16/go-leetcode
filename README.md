@@ -33,3 +33,21 @@
 | 167 | 两数之和II-输入有序数组       |           [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/167-twoSum/twoSum.go)            | 82.96%  |     中等     |    数组,双指针    |
 | 11  | 盛水最多的容器             |           [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/11-maxArea/maxArea.go)           | 23.32%  |     中等     |  贪心,数组,双指针   |
 | 15  | 三数之和                |          [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/15-threeSum/threeSum.go)          | 93.80%  |     中等     |   数组, 双指针    |
+| 209 | 长度最小的子数组          | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/209-minSubArrayLen/minSubArrayLen.go)      | 89.84%  |   中等      | 数组,滑动窗口 |
+| 3   | 无重复字符的最长子串      | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/3-longestSubstring/longestSubstring.go)    | 78.60%   |   中等      | 哈希表,字符串,滑动窗口 |
+| 30  | 串联所有单词的子串       | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/30-findSubstring/findSubstring.go)          | 9.48%    |  困难      | 哈希表,字符串,滑动窗口 |
+| 76  | 最小覆盖子串           |[Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/76-minWindow/minWindow.go)                    | 46.50%   |  困难      | 哈希表,字符串,滑动窗口 |
+| 36  | 有效的数独            | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/36-isValidSudoku/isValidSudoku.go)            | 100.00%  | 中等       | 数组,哈希表,矩阵      |
+| 54  | 螺旋矩阵              | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/54-spiralOrder/spiralOrder.go)                | 16.21%   | 中等       | 数组,矩阵    |
+| 48  | 旋转图像             | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/48-rotate/rotate.go)                           | 32.29%   | 中等       | 数组,矩阵    |
+| 73  | 矩阵置零            |  [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/73-setZeroes/setZeroes.go)                     | 47.12%   | 中等       | 数组,矩阵    |
+| 289 | 生命游戏            |  [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/289-gameOfLife/gameOfLife.go)                  | 16.80%   | 中等       | 数组,矩阵    |
+| 383 | 赎金信             | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/383-canConstruct/canConstruct.go)                | 29.88%   | 简单       | 哈希表，字符串 |
+| 205 | 同构字符串          | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/205-isIsomorphic/isIsomorphic.go)                | 23.88%   | 简单       | 哈希表，字符串 |
+| 290 | 单词规律            | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/290-wordPattern/wordPattern.go)                  | 17.69%   | 简单       | 哈希表，字符串 |
+| 242 | 有效的字母异位词    |  [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/242-isAnagram/isAnagram.go)                      | 100.00%   | 简单      | 哈希表，字符串 |
+| 49  | 字母异位词分组     | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/49-groupAnagrams/groupAnagrams.go)                | 57.72%    | 中等       | 哈希表, 字符串 |
+| 1   | 两数之和          | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/1-twoSum/twoSum.go)                              | 79.98%     | 简单       | 数组, 哈希表  |
+| 202 | 快乐数           | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/202-isHappy/isHappy.go)                          | 26.73%     | 简单        | 哈希表, 双指针 |
+| 219 | 存在重复元素 II   | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/219-nearbyDuplicate/nearbyDuplicate.go)          | 35.18%     | 简单        | 哈希表, 滑动窗口 |
+| 128 | 最长连续序列      | [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/128-longestConsecutive/longestConsecutive.go)    | 96.80%      | 中等       | 数组, 哈希表 |
