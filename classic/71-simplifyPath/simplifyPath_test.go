@@ -1,4 +1,4 @@
-package _0_simplifyPath
+package _1_simplifyPath
 
 import "testing"
 
