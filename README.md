@@ -1,6 +1,6 @@
 ## LeetCode算法题Go语言实现
 
-根据题库、数据结构和算法进行整理输出--
+根据题库、数据结构和算法进行整理输出
 
 ### [面试经典 150 题](https://leetcode.cn/studyplan/top-interview-150/)
 
