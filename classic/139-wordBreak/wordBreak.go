@@ -29,6 +29,24 @@ package _39_wordBreak
 // s 和 wordDict[i] 仅由小写英文字母组成
 // wordDict 中的所有字符串 互不相同
 
+// 动态规划
+// dp[i] 表示字符串[0,i]子串能否被wordDict中的单词拼接, len(s) = n
+// 当 i = 0时, dp[0] = true
+// 从前向后遍历 i, 当dp[i] = true 时, 子串[i+1, j] (j = i+1, i+2, ..., n)若能被wordDict中的单词拼接, 则dp[j] = true
+// 这样使 i 从0->n-1, j=i+1 -> n 遍历, 就能找出dp[i]中的所有值, 最终的结果即为dp[n]
 func wordBreak(s string, wordDict []string) bool {
-	return false
+	dp := make([]bool, len(s)+1)
+	dp[0] = true
+	wordDictSet := map[string]bool{}
+	for _, w := range wordDict {
+		wordDictSet[w] = true
+	}
+	for i := 0; i < len(s); i++ {
+		for j := i + 1; j <= len(s); j++ {
+			if dp[i] && wordDictSet[s[i:j]] {
+				dp[j] = true
+			}
+		}
+	}
+	return dp[len(s)]
 }
