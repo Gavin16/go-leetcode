@@ -96,6 +96,20 @@
 | 399 | 除法求值                |         [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/399-calcEquation/calcEquation.go)         | 100.00% |     中等     | 图,数组，字符串,广/深度优先搜索,并查集 |
 | 207 | 课程表                 |            [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/207-canFinish/canFinish.go)            | 52.79%  |     中等     | 图,深度优先搜索,广度优先搜索,拓补排序  |
 | 210 | 课程表 II              |            [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/210-findOrder/findOrder.go)            | 75.55%  |     中等     | 图,深度优先搜索,广度优先搜索,拓补排序  |
+| 909 | 蛇梯棋                 |     [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/909-snakesAndLadders/snakesAndLadders.go)     | 82.38%  |     中等     |     数组,矩阵,广度优先搜索      |
+| 433 | 最小基因变化              |          [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/433-minMutation/minMutation.go)          | 23.02%  |     中等     |    字符串,哈希表,广度优先搜索     |
+| 127 | 单词接龙                |         [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/127-ladderLength/ladderLength.go)         | 20.44%  |     困难     |    字符串,哈希表,广度优先搜索     |
+| 208 | 实现 Trie (前缀树)       |                 [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/208-Trie/Trie.go)                 | 51.56%  |     中等     |    字符串,哈希表,字典树,设计     |
+| 211 | 添加与搜索单词-数据结构设计      |       [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/211-WordDictionary/WordDictionary.go)       | 13.18%  |     中等     |   字符串,深度优先搜索,字典树,设计   |
+| 212 | 单词搜索 II             |            [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/212-findWords/findWords.go)            | 60.50%  |     困难     |   字符串,数组,回溯,矩阵,字典树    |
+| 17  | 电话号码的字母组合           |            [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/212-findWords/findWords.go)            | 60.50%  |     困难     |      字符串,回溯,哈希表       |
+| 77  | 组合                  |              [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/77-combine/combine.go)               | 73.17%  |     中等     |          回溯           |
+| 46  | 全排列                 |              [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/46-permute/permute.go)               | 100.00% |     中等     |         数组,回溯         |
+| 39  | 组合总和                |       [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/39-combinationSum/combinationSum.go)        | 100.00% |     中等     |         数组,回溯         |
+| 52  | N 皇后 II             |         [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/52-totalNQueens/totalNQueens.go)          | 100.00% |     困难     |          回溯           |
+| 79  | 单词搜索                |                [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/79-exist/exist.go)                 | 61.91%  |     中等     |    深度优先搜索,回溯,数组,矩阵    |
+| 148 | 排序链表                |             [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/148-sortList/sortList.go)             | 14.89%  |     中等     |   链表,双指针,分治,排序,归并排序   |
+| 427 | 建立四叉树               |            [Go](https://github.com/Gavin16/go-leetcode/blob/main/classic/427-construct/construct.go)            | 67.24%  |     中等     |      树,数组,分治,矩阵       |
 
 
 
