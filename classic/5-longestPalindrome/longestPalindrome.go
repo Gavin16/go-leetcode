@@ -18,6 +18,7 @@ package __longestPalindrome
 // 1 <= s.length <= 1000
 // s 仅由数字和英文字母组成
 
+// 暴力解法
 func longestPalindrome(s string) string {
 	l := len(s)
 	f := make([][]int, l)
@@ -58,4 +59,40 @@ func isPalindrome(s string, start, end int) bool {
 		}
 	}
 	return true
+}
+
+// 动态规划解法
+// (1) 定义f(i,j) 表示s 子串s[i,j] 是否可以表示为回文字符串
+// (2) f(i,j+1) = f(i+1, j) && s[i] == s[j+1]
+// (3) 对于 i==j f(i,j) = true
+//
+//	对于 i+1=j f(i,j) = s[i] == s[j]
+//
+// (4) 对于
+func longestPalindrome1(s string) string {
+	l := len(s)
+	f := make([][]bool, l)
+	for id := range f {
+		f[id] = make([]bool, l)
+	}
+	for k := 0; k < l; k++ {
+		f[k][k] = true
+	}
+
+	maxLen, left, right := 1, 0, 0
+	for i := l - 1; i >= 0; i-- {
+		for j := i + 1; j < l; j++ {
+			k := j - i + 1
+			if k == 2 {
+				f[i][j] = s[i] == s[j]
+			} else {
+				f[i][j] = f[i+1][j-1] && (s[i] == s[j])
+			}
+			if f[i][j] && k > maxLen {
+				maxLen = k
+				left, right = i, j
+			}
+		}
+	}
+	return s[left : right+1]
 }
