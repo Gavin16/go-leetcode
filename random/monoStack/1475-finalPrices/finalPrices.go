@@ -31,6 +31,8 @@ package _475_finalPrices
 // 1 <= prices.length <= 500
 // 1 <= prices[i] <= 10^3
 
+import "fmt"
+
 func finalPrices(prices []int) []int {
 	n := len(prices)
 	rightIdx := make([]int, n)
@@ -52,5 +54,6 @@ func finalPrices(prices []int) []int {
 			ans[i] = prices[i] - prices[rightIdx[i]]
 		}
 	}
+	fmt.Println(ans)
 	return ans
 }

@@ -1,5 +1,10 @@
 package _02_findMaximizedCapital
 
+import (
+	"container/heap"
+	"sort"
+)
+
 // 502. IPO
 // 假设 力扣（LeetCode）即将开始 IPO 。为了以更高的价格将股票卖给风险投资公司，力扣 希望在 IPO 之前开展一些项目以增加其资本。 由于资源有限，它只能在 IPO 之前完成最多 k 个不同的项目。帮助 力扣 设计完成最多 k 个不同项目后得到最大总资本的方式。
 //
@@ -35,6 +40,52 @@ package _02_findMaximizedCapital
 // 1 <= n <= 105
 // 0 <= profits[i] <= 104
 // 0 <= capital[i] <= 109
+
+// 使用大顶堆保存利润 profits[i] - capital[i]
+// 对cap 做成本排序，仅取出w >= cap[i] 对应的项目加入大顶堆
+// 结束一个项目后, k -= 1, w += profits[j] - capital[j]
+
 func findMaximizedCapital(k int, w int, profits []int, capital []int) int {
-	return 0
+	n, projects := len(profits), make([]*Project, 0)
+	for i := 0; i < n; i++ {
+		projects = append(projects,
+			&Project{id: i, pro: profits[i], cap: capital[i]})
+	}
+	sort.Slice(projects, func(i, j int) bool {
+		return projects[i].cap < projects[j].cap
+	})
+
+	// 使用大顶堆计算
+	maxHeap := MaxHeap{}
+	heap.Init(&maxHeap)
+	pos := 0
+	for i := k; i > 0; i-- {
+		for ; pos < n && projects[pos].cap <= w; pos++ {
+			heap.Push(&maxHeap, projects[pos])
+		}
+		if len(maxHeap) == 0 {
+			continue
+		}
+		maxEle := heap.Pop(&maxHeap)
+		maxProject := maxEle.(*Project)
+		w += maxProject.pro
+	}
+	return w
 }
+
+type Project struct {
+	id  int
+	cap int
+	pro int
+}
+
+// 元素以[i,cap[i]] 形式保存各项目id 和 对应启动成本
+
+type MaxHeap []*Project
+
+func (h MaxHeap) Len() int           { return len(h) }
+func (h MaxHeap) Less(i, j int) bool { return h[i].pro > h[j].pro }
+func (h MaxHeap) Swap(i, j int)      { h[i], h[j] = h[j], h[i] }
+func (h *MaxHeap) Push(x any)        { *h = append(*h, x.(*Project)) }
+func (h *MaxHeap) Pop() any          { old := *h; x := old[len(old)-1]; *h = old[:len(old)-1]; return x }
+func (h MaxHeap) Peek() *Project     { return h[0] }

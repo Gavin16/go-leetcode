@@ -25,7 +25,38 @@ package _88_maxProfit
 // 1 <= k <= 100
 // 1 <= prices.length <= 1000
 // 0 <= prices[i] <= 1000
-func maxProfit(k int, prices []int) int {
 
-	return 0
+// 定义f[i][j], 其中 i 为股票的天数
+// j ∈[0, 2k] (n=len(prices)), j 为奇数时代表第j+1/2次交易买入, j为偶数时代表第j/2次交易卖出
+// f[i][j] 则代表第i天 第 (j+1)/2 或者 j/2 次买入/卖出时能获得的最大收益
+
+func maxProfit(k int, prices []int) int {
+	N := len(prices)
+	f := make([][]int, N)
+	for id := range f {
+		f[id] = make([]int, 2*k+1)
+	}
+	for i := 0; i < (2*k + 1); i++ {
+		// 这里第0天的第i次的卖出都为0 相当于买入之后马上又卖出
+		// 第0天的第i次的买入,则为成本价取负
+		if i%2 == 1 {
+			f[0][i] = -prices[0]
+		}
+	}
+	for i := 1; i < N; i++ {
+		for j := 1; j < (2*k + 1); j++ {
+			if j%2 == 0 {
+				f[i][j] = max(f[i-1][j], f[i-1][j-1]+prices[i])
+			} else {
+				f[i][j] = max(f[i-1][j], f[i-1][j-1]-prices[i])
+			}
+		}
+	}
+	ans := 0
+	for i := 0; i < (2*k + 1); i++ {
+		if i%2 == 0 {
+			ans = max(ans, f[N-1][i])
+		}
+	}
+	return ans
 }

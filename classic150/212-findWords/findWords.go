@@ -40,7 +40,7 @@ func findWords(board [][]byte, words []string) []string {
 
 	var dfs func(node *Trie, x, y int)
 	// 单次递归的时间复杂度为 3^l, 其中l为单词的长度
-	// 因此除了board 中开始 dfs 的初始节点，每个节点往下递归时，最多面临3个节点的后继节点
+	// 因此除了board 中开始 tree 的初始节点，每个节点往下递归时，最多面临3个节点的后继节点
 	dfs = func(node *Trie, x, y int) {
 		ch := board[x][y]
 		node = node.children[ch-'a']
