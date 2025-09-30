@@ -1,7 +1,5 @@
 package _99_calcEquation
 
-import "strings"
-
 // 399. 除法求值
 // 给你一个变量对数组 equations 和一个实数值数组 values 作为已知条件，
 // 其中 equations[i] = [Ai, Bi] 和 values[i] 共同表示等式 Ai / Bi = values[i] 。每个 Ai 或 Bi 是一个表示单个变量的字符串。
@@ -45,57 +43,54 @@ import "strings"
 // Ai, Bi, Cj, Dj 由小写英文字母与数字组成
 
 func calcEquation(equations [][]string, values []float64, queries [][]string) []float64 {
-	adjList := buildEquationAdj(equations, values)
+	graph := &Graph{nodes: make(map[string][]*Edge)}
+	for i := 0; i < len(values); i++ {
+		eq := equations[i]
+		from, to := eq[0], eq[1]
+		graph.addGraphEdge(from, to, values[i])
+		graph.addGraphEdge(to, from, 1/values[i])
+	}
+
 	ans := make([]float64, len(queries))
 	for i, query := range queries {
-		c, d := query[0], query[1]
-		c, d = removeCommon(c, d)
-		if adjList[c] == nil || adjList[d] == nil {
-			ans[i] = float64(-1)
-		} else {
-			mul, memo := float64(1), make(map[string]int)
-			queue := []string{c}
-			memo[c] = 1
-			for len(queue) > 0 {
-				neighbors := adjList[c]
-				for _, node := range neighbors {
-					if node.str == d {
-
-					} else {
-						
-					}
-				}
-			}
-			ans = append(ans, mul)
-		}
-
+		ans[i] = graph.query(query[0], query[1])
 	}
 	return ans
 }
 
-func buildEquationAdj(equations [][]string, values []float64) map[string][]Node {
-	adjList := make(map[string][]Node)
-	for i := 0; i < len(equations); i++ {
-		a, b := equations[i][0], equations[i][1]
-		a, b = removeCommon(a, b)
-		adjList[a] = append(adjList[a], Node{str: b, val: values[i]})
-		adjList[b] = append(adjList[b], Node{str: a, val: 1 / values[i]})
-	}
-	return adjList
+type Graph struct {
+	nodes map[string][]*Edge
 }
 
-func removeCommon(a, b string) (s, t string) {
-	c, d := a, b
-	for _, ch := range a {
-		d = strings.ReplaceAll(d, string(ch), "")
-	}
-	for _, ch := range b {
-		c = strings.ReplaceAll(c, string(ch), "")
-	}
-	return c, d
+type Edge struct {
+	to   string
+	cost float64
 }
 
-type Node struct {
-	str string
-	val float64
+func (g *Graph) addGraphEdge(from, to string, cost float64) {
+	g.nodes[from] = append(g.nodes[from], &Edge{to, cost})
+}
+
+func (g *Graph) query(start, end string) float64 {
+	if g.nodes[start] == nil || g.nodes[end] == nil {
+		return float64(-1)
+	}
+	visited := make(map[string]bool)
+	queue := []*Edge{{start, float64(1)}}
+	for len(queue) > 0 {
+		node := queue[0]
+		queue = queue[1:]
+		if visited[node.to] {
+			continue
+		}
+		visited[node.to] = true
+		if node.to == end {
+			return node.cost
+		}
+		edges := g.nodes[node.to]
+		for _, edge := range edges {
+			queue = append(queue, &Edge{edge.to, node.cost * edge.cost})
+		}
+	}
+	return float64(-1)
 }

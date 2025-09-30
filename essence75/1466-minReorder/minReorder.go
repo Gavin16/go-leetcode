@@ -34,6 +34,26 @@ package _466_minReorder
 // connections[i].length == 2
 // 0 <= connections[i][0], connections[i][1] <= n-1
 // connections[i][0] != connections[i][1]
-func minReorder(n int, connections [][]int) int {
 
+func minReorder(n int, connections [][]int) int {
+	adjs := make(map[int][][]int)
+	for _, edge := range connections {
+		// []int{edge[1], 1} 代表从树根往树叶的方向
+		// 因为视为树后,才采用自顶向下的方向遍历,所以向下的方向都是反方向
+		adjs[edge[0]] = append(adjs[edge[0]], []int{edge[1], 1})
+		adjs[edge[1]] = append(adjs[edge[1]], []int{edge[0], 0})
+	}
+	var dfs func(curr, parent int) int
+	dfs = func(curr, parent int) int {
+		res := 0
+		for _, next := range adjs[curr] {
+			if next[0] == parent {
+				continue
+			}
+			res += next[1] + dfs(next[0], curr)
+		}
+		return res
+	}
+	ans := dfs(0, -1)
+	return ans
 }
