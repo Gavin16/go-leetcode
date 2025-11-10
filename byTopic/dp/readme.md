@@ -18,13 +18,13 @@
 问：在 1:1 翻译的过程中，如何根据记忆化搜索，确定递推数组（DP 数组）的大小？为什么有时候要开 n+1 大小的数组，有时候要开 n+2 大小的数组？
 > 答：看记忆化搜索的参数的范围（最小值和最大值）。例如 i 最小是 −1（递归边界也算），最大是 n−1（递归入口），那么一共有 n+1 个不同的 i，就需要开 n+1 大小的 DP 数组。如果 i 最小是 −2，最大是 n−1，一共有 n+2 个不同的 i，就需要开 n+2 大小的 DP 数组。
 
-[198. 打家劫舍](https://leetcode.cn/problems/house-robber/)
-[213. 打家劫舍 II](https://leetcode.cn/problems/house-robber-ii/) 环形
-[2320. 统计放置房子的方式数](https://leetcode.cn/problems/count-number-of-ways-to-place-houses/) 1608
-[740. 删除并获得点数](https://leetcode.cn/problems/delete-and-earn/)
-[3186. 施咒的最大总伤害](https://leetcode.cn/problems/maximum-total-damage-with-spell-casting/) 1841
+[198. 打家劫舍](https://leetcode.cn/problems/house-robber/)  
+[213. 打家劫舍 II](https://leetcode.cn/problems/house-robber-ii/) 环形  
+[2320. 统计放置房子的方式数](https://leetcode.cn/problems/count-number-of-ways-to-place-houses/) 1608  
+[740. 删除并获得点数](https://leetcode.cn/problems/delete-and-earn/)  
+[3186. 施咒的最大总伤害](https://leetcode.cn/problems/maximum-total-damage-with-spell-casting/) 1841  
 思维扩展：
-[2140. 解决智力问题](https://leetcode.cn/problems/solving-questions-with-brainpower/) 1709
+[2140. 解决智力问题](https://leetcode.cn/problems/solving-questions-with-brainpower/) 1709  
 
 ### §1.3 最大子数组和（最大子段和）
 
@@ -33,15 +33,15 @@
 
 > 2. 用 前缀和，转化成 121. 买卖股票的最佳时机。
 
-[53. 最大子数组和](https://leetcode.cn/problems/maximum-subarray/) 可以看看我题解中的思考题
-[2606. 找到最大开销的子字符串](https://leetcode.cn/problems/find-the-substring-with-maximum-cost/) 1422
-[1749. 任意子数组和的绝对值的最大值](https://leetcode.cn/problems/maximum-absolute-sum-of-any-subarray/) 1542
-[1191. K 次串联后最大子数组之和](https://leetcode.cn/problems/k-concatenation-maximum-sum/) 1748
-[918. 环形子数组的最大和](https://leetcode.cn/problems/maximum-sum-circular-subarray/) 1777
-[2321. 拼接数组的最大分数](https://leetcode.cn/problems/maximum-score-of-spliced-array/) 1791
+[53. 最大子数组和](https://leetcode.cn/problems/maximum-subarray/) 可以看看我题解中的思考题  
+[2606. 找到最大开销的子字符串](https://leetcode.cn/problems/find-the-substring-with-maximum-cost/) 1422  
+[1749. 任意子数组和的绝对值的最大值](https://leetcode.cn/problems/maximum-absolute-sum-of-any-subarray/) 1542  
+[1191. K 次串联后最大子数组之和](https://leetcode.cn/problems/k-concatenation-maximum-sum/) 1748  
+[918. 环形子数组的最大和](https://leetcode.cn/problems/maximum-sum-circular-subarray/) 1777  
+[2321. 拼接数组的最大分数](https://leetcode.cn/problems/maximum-score-of-spliced-array/) 1791  
 思维扩展：
-[152. 乘积最大子数组](https://leetcode.cn/problems/maximum-product-subarray/)
-[1186. 删除一次得到子数组最大和](https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/) 1799
+[152. 乘积最大子数组](https://leetcode.cn/problems/maximum-product-subarray/)  
+[1186. 删除一次得到子数组最大和](https://leetcode.cn/problems/maximum-subarray-sum-with-one-deletion/) 1799  
 
 思考题  
 > 完成本章后，请思考：什么时候要返回 f[n]，什么时候要返回 max(f) ？
