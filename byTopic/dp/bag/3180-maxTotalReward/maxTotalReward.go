@@ -3,6 +3,7 @@ package _180_maxTotalReward
 import (
 	"math/big"
 	"slices"
+	"sort"
 )
 
 // 3180. 执行操作可获得的最大总奖励 I
@@ -74,4 +75,34 @@ func maxTotalReward1(rewardValues []int) int {
 		f.Or(f, p.Lsh(p.And(f, mask), uint(v)))
 	}
 	return f.BitLen() - 1
+}
+
+func maxTotalReward2(rewardValues []int) int {
+	sort.Ints(rewardValues)
+	rewardValues = slices.Compact(rewardValues)
+	n := len(rewardValues)
+	// f[i][r] 是否能在i位置能获得最大奖励r
+	maxV := rewardValues[n-1]
+	limit := 2 * maxV
+	f := make([][]bool, n+1)
+	for i := range f {
+		f[i] = make([]bool, limit)
+	}
+	f[0][0] = true
+	for i, v := range rewardValues {
+		for j := range limit {
+			if j >= v && j < 2*v {
+				f[i+1][j] = f[i][j] || f[i][j-v]
+			} else {
+				f[i+1][j] = f[i][j]
+			}
+		}
+	}
+	ans := 0
+	for j := 0; j < limit; j++ {
+		if f[n][j] {
+			ans = j
+		}
+	}
+	return ans
 }

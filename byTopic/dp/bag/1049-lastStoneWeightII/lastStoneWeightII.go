@@ -40,8 +40,6 @@ func lastStoneWeightII(stones []int) int {
 	msk := big.NewInt(1).Lsh(big.NewInt(1), uint(bag+1))
 	msk.Sub(msk, big.NewInt(1))
 
-	dp := make([]bool, bag+1)
-	dp[0] = true
 	for _, v := range stones {
 		bits = bits.Or(bits, big.NewInt(1).Lsh(bits, uint(v)))
 		bits.And(bits, msk)
